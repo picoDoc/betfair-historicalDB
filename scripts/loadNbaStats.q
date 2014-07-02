@@ -14,7 +14,7 @@ stats:()!();
 	stats[`$year]:(string team)!{select from y where Team=x}[;t] each team:distinct t`Team;
 	} each ("2005";"2006";"2007";"2008";"2009";"2010";"2011";"2012");
 
-
+playerStats:`year xcols raze value {[x;y]update year:y from raze value x}'[stats;key stats];
 /.j.j (string key[stats])!value[stats]t
 
 
