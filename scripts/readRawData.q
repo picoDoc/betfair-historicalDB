@@ -18,7 +18,7 @@ bettingData set ();
   t:select from t where SPORTS_ID=sportsId;
   t:@[t;`SETTLED_DATE`FULL_DESCRIPTION`SCHEDULED_OFF`EVENT,(`$"DT ACTUAL_OFF"),`SELECTION`LATEST_TAKEN`FIRST_TAKEN`IN_PLAY;{y$x};`];
   bettingData insert t;
-  } each 20#f;
+  } each f;
 
 /rename poorly named column and remove old col
 ![bettingData;();0b;(enlist`DT_ACTUAL_OFF)!(enlist`$"DT ACTUAL_OFF")];
